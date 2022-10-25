@@ -1,0 +1,6 @@
+.env
+.env/
+.jupyter/
+.local
+**/.ipynb_checkpoints
+tutorials/

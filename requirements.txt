@@ -1,0 +1,14 @@
+shaarpec==1.0.2
+jupytext
+matplotlib
+scipy
+pandas
+tqdm
+jupyterlab-code-formatter
+black
+isort
+plotly
+ipywidgets
+kaleido
+networkx
+ipycytoscape
