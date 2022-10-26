@@ -11,4 +11,4 @@ docker run \
     --name shaarpec-setup-tutorials \
     -v $(pwd)/src:/tmp/src \
     shaarpec-tutorials jupytext --to ipynb --update-metadata '{"jupytext":null}' /tmp/src/*.md \
-    && mv src/*.ipynb src/*.json tutorials/
+    && mv src/*.ipynb tutorials/ && cp src/style.json tutorials/

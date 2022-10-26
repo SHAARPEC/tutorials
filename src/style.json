@@ -1,0 +1,24 @@
+[
+    {
+        "selector": "node",
+        "css": {
+            "color": "#1f78b4",
+            "background-color": "#a6cee3",
+            "width": "data(size)",
+            "height": "data(size)",
+            "content": "data(elapsed_days_label)"
+        }
+    },
+    {
+        "selector": "edge",
+        "style": {
+            "display": "element",
+            "width": 10,
+            "line-color": "#1f78b4",
+            "target-arrow-shape": "triangle",
+            "target-arrow-color": "#1f78b4",
+            "curve-style": "bezier",
+            "arrow-scale": 0.75
+        }
+    }
+]
