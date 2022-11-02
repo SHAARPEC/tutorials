@@ -28,8 +28,10 @@ run:	build check-client-id check-client-secret
 			-w /home/jovyan/tutorials \
 			-p 8888:8888 \
             -d shaarpec-tutorials \
-			start.sh jupyter lab --LabApp.token='' \
-			|| { echo "Failed to start tutorials!"; exit 1; }
+			start.sh jupyter lab \
+				--LabApp.token='' \
+				--ServerApp.iopub_data_rate_limit=1.0e10 \
+				|| { echo "Failed to start tutorials!"; exit 1; }
 		@echo "Tutorials started at http://localhost:8888!"
 
 restart:	
