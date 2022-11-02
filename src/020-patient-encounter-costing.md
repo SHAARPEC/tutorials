@@ -122,7 +122,11 @@ pec_accumulation = pd.DataFrame(
 pec_accumulation
 ```
 
-The returned data is a sorted list of patients in the cohort and their costs during the time period (from patient with most costs to patient with least costs). This can be visualized in a line plot (we need to add a zero point to get a continuous line).
+The returned data is a sorted list of patients in the cohort and their costs during the time period (from patient with most costs to patient with least costs).
+
+In other words, the DataFrame has one row for each patient in the population, and is sorted in descending order on PEC utilization cost ("most expensive patient first"). The `count_` and `sum_` columns are accumulated costs per EncounterCategory, `cost_share` is the percentage of total cost (100% is maximum) and `n` is the percentage of patients in the population.
+
+This can be visualized in a line plot (we need to add a zero point to get a continuous line).
 
 ```python
 import plotly.express as px

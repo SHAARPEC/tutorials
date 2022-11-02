@@ -59,7 +59,7 @@ You also need *credentials*. For device flow these are:
 
 These values can be given to the `auth` keyword in the `Client` constructor, but it is bad practice to store confidential information in your code. The SHAARPEC Python client authenticates using the [oidcish](https://github.com/SHAARPEC/oidcish) library, which supports a better option, namely to read them dynamically as [environment variables](https://en.wikipedia.org/wiki/Environment_variable). `oidcish` expects a variable prefix (default is `OIDCISH_`).
 
-These variables are preset in the environment of this tutorial. Note that oidcish also supports keeping the variables in a .env file in the same folder as the script, see the oidcish documentation for details. The audience and scope do not need to be changed. The client id and secret must be provided to start this tutorial.  
+These variables are pre-set in the environment of this tutorial. Note that oidcish also supports keeping the variables in a .env file in the same folder as the script, see the oidcish documentation for details. The audience and scope do not need to be changed. The client id and secret must be provided to start this tutorial.
 <!-- #endregion -->
 
 ```python tags=[]

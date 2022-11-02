@@ -66,3 +66,8 @@ df = pd.Series(
 ```python
 df
 ```
+
+This is the result of a Chads2Vasc2 analysis of the atrial fibrillation cohort in the year of 2018 (28 patients in total). The CHA2DS2-VASc score is used to help clinicians suggest blood thinning treatments to prevent strokes. The CHA2DS2-VASc extends the CHADS2 score by including additional stroke risk factors (age 65–74 with age 75 and above with extra weight, female gender, and vascular disease).
+Patients with elevated risk of stroke are those with score > 1. Anticoagulant therapy is recommended for those patients.
+
+The above analysis shows the number of high-risk patients, whether they had a stroke and if they were prescribed anticoagulants in line with the recommended therapy. Here, none of the high-risk patients had the correct treatment, but no one either got a stroke.
