@@ -2,7 +2,9 @@
 
 ## TL;DR
 
-Install git and Docker. Clone this repo. Create the tutorial notebooks:
+Install git and Docker. Clone this repo. Set the environment variables for the client id (SHAARPEC_CLIENT_ID) and the client secret (SHAARPEC_CLIENT_SECRET) in your environment.
+
+Create the tutorial notebooks:
 
 ```bash
 make setup
@@ -33,11 +35,15 @@ Note: The SHAARPEC demo instances contain only artificial data, created with the
 
 ## How to run the tutorials
 
-This repo contains a number of SHAARPEC tutorials to get you started with the platform, in the form of [Jupyter notebooks](https://jupyter.org/jupyter). They are most easily run and packaged with [Docker](https://www.docker.com). To run the tutorials:
+This repo contains a number of SHAARPEC tutorials to get you started with the platform, in the form of [Jupyter notebooks](https://jupyter.org). They are most easily run and packaged with [Docker](https://www.docker.com). To run the tutorials:
 
 1. Install Docker on your computer by following the above link.
 
-2. Setup the tutorials by creating the notebooks. Use one of these methods, listed in order of simplicity:
+2. Clone the repo.
+
+3. Set the environment variables for the client id (SHAARPEC_CLIENT_ID) and the client secret (SHAARPEC_CLIENT_SECRET) in your environment.
+
+4. Setup the tutorials by creating the notebooks. Use one of these methods from the root folder of the repo, listed in order of simplicity:
 
     a. In bash using `make`:
 
@@ -60,7 +66,7 @@ This repo contains a number of SHAARPEC tutorials to get you started with the pl
 
     Move `scripts/*.ipynb` and `scripts/*.json` to tutorials folder.
 
-3. Run the tutorials as a Docker image. Use one of these methods, listed in order of simplicity.
+5. Run the tutorials as a Docker image. Use one of these methods, listed in order of simplicity.
 
     a. In bash using `make`:
 
@@ -82,7 +88,7 @@ This repo contains a number of SHAARPEC tutorials to get you started with the pl
     > docker run --name shaarpec-tutorials --user root -e OIDCISH_CLIENT_ID="${SHAARPEC_CLIENT_ID}" -e OIDCISH_CLIENT_SECRET="${SHAARPEC_CLIENT_SECRET}" -e OIDCISH_AUDIENCE=shaarpec_api.full_access_scope -e OIDCISH_SCOPE="openid shaarpec_api.full_access_scope offline_access" -e GRANT_SUDO=yes -v $(CURDIR)/tutorials:/home/jovyan/tutorials -w /home/jovyan/tutorials -p 8888:8888 -d shaarpec-tutorials start.sh jupyter lab --LabApp.token=''
     ```
 
-4. Visit the jupyter server at localhost:8888 to go through the tutorials.
+6. Visit the jupyter server at http://localhost:8888 to go through the tutorials.
 
 Note: You can also launch the Jupyter notebooks manually without Docker but that is outside the scope of this documentation.
 
