@@ -1,4 +1,4 @@
-shaarpec==1.0.2
+shaarpec
 jupytext
 matplotlib
 scipy
